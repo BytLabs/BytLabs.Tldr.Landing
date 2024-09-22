@@ -1,0 +1,51 @@
+name: Deploy Next.js site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Change to your default branch if necessary
+  workflow_dispatch: # Allow manual triggering of the workflow
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Match Node version with your project
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js for production
+        run: npm run build
+
+      - name: Export static files for GitHub Pages
+        run: npm run export
+
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: out
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
