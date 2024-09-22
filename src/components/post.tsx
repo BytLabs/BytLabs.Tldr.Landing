@@ -24,7 +24,7 @@ export function Post(props: PostProps) {
                   src={props?.coverImagePath}
                   alt="nature image"
                 />
-                <Typography variant="h3" color="white" className="mb-4">
+                <Typography variant="h5" color="white" className="mb-4">
                   {props?.title}
                 </Typography>
                 <Typography
@@ -74,14 +74,14 @@ export function Post(props: PostProps) {
             />
           </div>
         </header>
-        <div className="mx-8 lg:mx-10 -mt-10 rounded-xl bg-white p-5 md:p-14 shadow-md">
+        <div className="mx-4 lg:mx-10 -mt-10 rounded-xl bg-white p-5 md:p-14 shadow-md">
           <div>
-            <Typography variant="h3" color="blue-gray" className="mb-3">
+            <Typography variant="h5" color="blue-gray" className="mb-3">
               About this app
             </Typography>
             <Typography
               variant="paragraph"
-              className="font-normal !text-gray-500 lg:w-5/12"
+              className="text-sm !text-gray-500 lg:w-5/12"
             >
               We scour the web to bring you the latest articles and updates, condensing them into short, easy-to-read summaries. 
               Whether you are on the go or just want the highlights, TLDR News keeps you up-to-date without the overwhelm.
