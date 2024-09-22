@@ -26,6 +26,9 @@
     "autoprefixer": "10",
     "eslint": "8",
     "eslint-config-next": "13.5.4",
+    "grunt": "^1.6.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
     "postcss": "8",
     "tailwindcss": "3",
     "typescript": "5"
