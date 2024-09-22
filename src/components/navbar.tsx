@@ -79,7 +79,7 @@ export function Navbar() {
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem href="">Home</NavItem>
+          <NavItem href="https://tldr.bytlabs.co/">Home</NavItem>
           <NavItem href="https://bytlabs.co/about">About Us</NavItem>
           <NavItem href="https://bytlabs.co/contact-us">Contact Us</NavItem>
         </ul>
@@ -122,7 +122,7 @@ export function Navbar() {
       <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem href="">Home</NavItem>
+            <NavItem href="https://tldr.bytlabs.co/">Home</NavItem>
             <NavItem href="https://bytlabs.co/about">About Us</NavItem>
             <NavItem href="https://bytlabs.co/contact-us">Contact Us</NavItem>
           </ul>

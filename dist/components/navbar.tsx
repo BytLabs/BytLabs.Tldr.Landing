@@ -79,7 +79,7 @@ export function Navbar() {
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem href="">Home</NavItem>
+          <NavItem href="https://tldr.bytlabs.co/">Home</NavItem>
           <NavItem href="https://bytlabs.co/about">About Us</NavItem>
           <NavItem href="https://bytlabs.co/contact-us">Contact Us</NavItem>
         </ul>
