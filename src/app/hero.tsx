@@ -46,7 +46,7 @@ function Hero({postId}) {
               Page not found
             </h1>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              Sorry, we couldn’t find the page you’re looking for.
+              Sorry, we could not find the page you are looking for.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
@@ -123,7 +123,7 @@ function Hero({postId}) {
                 Stay informed effortlessly with TLDR News, the ultimate app for
                 concise and meaningful news aggregation. We scour the web to
                 bring you the latest articles and updates, condensing them into
-                short, easy-to-read summaries. Whether you're on the go or just
+                short, easy-to-read summaries. Whether you are on the go or just
                 want the highlights, TLDR News keeps you up-to-date without the
                 overwhelm.
               </Typography>
