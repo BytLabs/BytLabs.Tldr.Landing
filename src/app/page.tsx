@@ -9,7 +9,7 @@ export default function Campaign() {
   return (
     <>
       <Navbar />
-      <Hero postId={null}/>
+      <Hero postId={""}/>
       <Footer />
     </>
   );

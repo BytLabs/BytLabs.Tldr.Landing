@@ -2,14 +2,12 @@
 import { Navbar, Footer } from "@/components";
 
 
-import Hero from "../hero";
+import Hero from "./hero";
 interface PageProps {
-  params: {
     postId: string;
-  };
 }
 
-export default function Campaign({ params }: PageProps) {
+export default function Campaign(params : PageProps) {
 
   const { postId } = params;
   return (

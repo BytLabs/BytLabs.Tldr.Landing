@@ -4,9 +4,19 @@ import Image from "next/image";
 import { Button, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 
-function Hero({postId}) {
+interface PageProps {
+  postId: string;
+}
 
-  const [apiData, setApiData] = useState(null);
+interface Post {
+  summary: string;
+  articleTitle: string;
+  coverImagePath: string;
+}
+
+function Hero(params:PageProps) {
+  const { postId } = params;
+  const [apiData, setApiData] = useState<Post>({} as Post);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -20,7 +30,7 @@ function Hero({postId}) {
       setApiData(data);
       console.log(data);
       setLoading(false);
-    } catch (err) {
+    } catch (err:any) {
       setError(err.message);
       setLoading(false);
     }
