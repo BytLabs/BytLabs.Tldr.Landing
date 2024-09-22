@@ -1,19 +1,22 @@
 {
+  "homepage": "https://kudchikarsk.github.io/BytLabs.Tldr.Landing",
   "name": "nextjs-tailwind-app-presentation-page",
   "version": "1.0.0",
   "private": true,
   "author": "Creative Tim",
   "license": "See license in https://www.creative-tim.com/license",
-  "homepage": "https://demos.creative-tim.com/nextjs-tailwind-app-presentation-page",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
     "@material-tailwind/react": "2.1.2",
+    "gh-pages": "^6.1.1",
     "next": "13.4.0",
     "nextjs-tailwind-app-presentation-page": "file:",
     "react": "18",
