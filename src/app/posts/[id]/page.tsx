@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     });
     
     if (!res.ok) {
-      throw new Error("Post not found");
+     error = "Post not found";
     }
 
     post = await res.json();
