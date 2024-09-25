@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Navbar, Footer } from "@/components";
 import { Post, PostProps } from '../../../components/post';
 
@@ -39,6 +40,21 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <>
+      <Head>
+        <meta
+          property="og:title"
+          content={post ? post.title : "404 Not Found"}
+        />
+        <meta
+          property="og:description"
+          content={post ? post.summary : "Oops! The post you're looking for isn't available. Stay updated with the latest news and articles by downloading our app."}
+        />
+        <meta
+          property="og:image"
+          content={post ? post.coverImagePath : "https://play-lh.googleusercontent.com/BSkud_lo8xYZ8bFSxSYcrE3I_CipymjqWPpQR3A5CUDwJpMjQiCoXZXKpTabcsI5cvU=w3840-h2160-rw"}
+        />
+      </Head>
+
       <Navbar />
       <div className="relative min-h-screen w-full">
         {error ? <Error /> : post ? <Post {...post} /> : <Loading />}
